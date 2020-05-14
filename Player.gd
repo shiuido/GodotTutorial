@@ -36,7 +36,7 @@ func _process(delta):
 		$AnimatedSprite.flip_v = velocity.y > 0
 
 func _input(event):
-	if event is InputEventScreenTouch and event.pressed:
+	if event is InputEventScreenDrag or event is InputEventScreenTouch:
 		target = event.position
 
 func _on_Player_body_entered(body):
